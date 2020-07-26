@@ -19,7 +19,7 @@ session = OAuth1Session(CK, CS, AT, AS)
 url = 'https://api.twitter.com/1.1/search/tweets.json'
 res = session.get(url, params = {'q':u'prtimes.jp/main', 'count':30})　　//prtimesの所に自分が検索したいワードを入れます
  
-# ステータスコード確認
+// ステータスコード確認
 if res.status_code != 200:　　　　　　　　　　　　　　　　　//twitter apiの使用制限の通知をします
     print ("Twitter API Error: %d" % res.status_code)
     sys.exit(1)
@@ -30,7 +30,7 @@ sec = int(res.headers['X-Rate-Limit-Reset'])\
            - time.mktime(datetime.datetime.now().timetuple())
 print ('リセット時間 （残り秒数に換算） %s' % sec)
  
-# テキスト部
+// テキスト部
 
 res_text = json.loads(res.text)
 for tweet in res_text['statuses']:
