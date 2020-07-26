@@ -20,7 +20,7 @@ AS = '自分のパスワードを入れます'　　　    # Access Token Secret
 session = OAuth1Session(CK, CS, AT, AS) <br>
  
 url = 'https://api.twitter.com/1.1/search/tweets.json' <br>
-res = session.get(url, params = {'q':u'prtimes.jp/main', 'count':30})　　//prtimesの所に自分が検索したいワードを入れます <br>
+res = session.get(url, params = {'q':u'prtimes.jp/main', 'count':30})//prtimesの所に自分が検索したいワードを入れます <br>
  
 // ステータスコード確認 <br>
 if res.status_code != 200:　　　　　　　　　　　　　　　　　//twitter apiの使用制限の通知をします <br>
@@ -48,6 +48,6 @@ for tweet in res_text['statuses']: <br>
 doc.save(r'C:\Users\ユーザ名\ディレクトリ名\aaa.docx')         //ここは仮にaaaという名前にしています。 <br>
 os.chdir(r'C:\Users\ユーザ名\ディレクトリ名\') <br>
 now = datetime.datetime.now()
-old = "aaa.docx"　　　　　　　　　　　　　　　　　　　　　　　　//3行前に書いたaaaと同じ名前にします。 <br>
-new = "{0:%Y%m%d_%H%M%Sprtimes}.docx".format(now)　　　　　//prtimesの所は先ほど指定した検索したいワードにします <br>
-os.rename(old,new)　　　　　　　　　　　　　　　　　　　　　　　//名前を現在の年、日付、時刻に変更します <br>
+old = "aaa.docx"　　　　　　//3行前に書いたaaaと同じ名前にします。 <br>
+new = "{0:%Y%m%d_%H%M%Sprtimes}.docx".format(now) //prtimesの所は先ほど指定した検索したいワードにします <br>
+os.rename(old,new)　　　　　　　　　　　　　　　　　　　//名前を現在の年、日付、時刻に変更します <br>
