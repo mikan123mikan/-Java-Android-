@@ -1,7 +1,4 @@
-使用言語：Python  
-twitter apiを使って特定のワードを検索し、20件のツイートを集めてテキスト化し、
-任意のハードディスク上のフォルダにワードファイルとして保存するプログラムです。
-使用時にOAuth認証が必要です。
+使用言語：Python  twitter apiを使って特定のワードを検索し、20件のツイートを集めてテキスト化し、任意のハードディスク上のフォルダにワードファイルとして保存するプログラムです。使用時にOAuth認証が必要です。
 
 from requests_oauthlib import OAuth1Session    //Oauth認証でtwitter apiを使用します
 import json
