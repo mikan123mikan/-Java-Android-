@@ -45,6 +45,6 @@ for tweet in res_text['statuses']:
 doc.save(r'C:\Users\ユーザ名\ディレクトリ名\aaa.docx')         //ここは仮にaaaという名前にしています。
 os.chdir(r'C:\Users\ユーザ名\ディレクトリ名\')
 now = datetime.datetime.now()
-old = "aaa.docx"　　　　　　　　　　　　　　　　　　　　　　　　//51行で書いたaaaと同じ名前にします。
+old = "aaa.docx"　　　　　　　　　　　　　　　　　　　　　　　　//3行前に書いたaaaと同じ名前にします。
 new = "{0:%Y%m%d_%H%M%Sprtimes}.docx".format(now)　　　　　//prtimesの所は先ほど指定した検索したいワードにします
 os.rename(old,new)　　　　　　　　　　　　　　　　　　　　　　　//名前を現在の年、日付、時刻に変更します
